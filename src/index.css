@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@import "swiper/css";
+
+@theme {
+  /* VS Code color palette */
+  --color-vsc-bg: #1e1e1e;
+  --color-vsc-sidebar: #252526;
+  --color-vsc-panel: #1e1e1e;
+  --color-vsc-active: #2d2d2d;
+  --color-vsc-border: #3c3c3c;
+  --color-vsc-input: #3c3c3c;
+  --color-vsc-blue: #007ACC;
+  --color-vsc-blue-light: #0098FF;
+  --color-vsc-blue-dark: #0e639c;
+  --color-vsc-text: #cccccc;
+  --color-vsc-text-muted: #858585;
+  --color-vsc-text-bright: #ffffff;
+  --color-vsc-green: #4ec9b0;
+  --color-vsc-yellow: #dcdcaa;
+  --color-vsc-orange: #ce9178;
+  --color-vsc-red: #f14c4c;
+  --color-vsc-purple: #c586c0;
+  --color-vsc-keyword: #569cd6;
+  --color-vsc-string: #ce9178;
+  --color-vsc-selection: #264f78;
+
+  /* Surface colors */
+  --color-surface-0: #181818;
+  --color-surface-1: #1e1e1e;
+  --color-surface-2: #252526;
+  --color-surface-3: #2d2d2d;
+  --color-surface-4: #333333;
+
+  --font-georgian: 'Noto Sans Georgian', sans-serif;
+  --font-latin: 'Nunito', sans-serif;
+  --font-mono: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-georgian);
+  background-color: var(--color-surface-0);
+  color: var(--color-vsc-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-georgian);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-vsc-text-bright);
+}
+
+code, .font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-latin {
+  font-family: var(--font-latin);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-vsc-border);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-vsc-text-muted);
+}
+
+::selection {
+  background-color: var(--color-vsc-selection);
+  color: var(--color-vsc-text-bright);
+}
+
+/* Dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Line grid pattern */
+.line-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 40px rgba(0, 122, 204, 0.15), 0 0 80px rgba(0, 122, 204, 0.05);
+}
+
+.glow-blue-strong {
+  box-shadow: 0 0 20px rgba(0, 122, 204, 0.3), 0 0 60px rgba(0, 122, 204, 0.1);
+}
+
+/* Swiper custom */
+.swiper-wrapper {
+  align-items: stretch;
+}
