@@ -54,12 +54,13 @@ export default function Navbar() {
                   {link.label}
                 </button>
               ))}
-              <button
-                onClick={() => scrollTo('final-cta')}
-                className="ml-3 px-5 py-2 text-sm font-bold text-white bg-vsc-blue hover:bg-vsc-blue-light border-none cursor-pointer rounded transition-all duration-200"
+              <a
+                href="/კოდერი Setup 1.0.0.exe"
+                download
+                className="ml-3 px-5 py-2 text-sm font-bold text-white bg-vsc-blue hover:bg-vsc-blue-light border-none cursor-pointer rounded transition-all duration-200 no-underline"
               >
                 ჩამოტვირთე
-              </button>
+              </a>
             </div>
 
             {/* Mobile hamburger */}
@@ -109,12 +110,13 @@ export default function Navbar() {
                     {link.label}
                   </button>
                 ))}
-                <button
-                  onClick={() => scrollTo('final-cta')}
-                  className="mt-4 px-5 py-2.5 text-sm font-bold text-white bg-vsc-blue border-none cursor-pointer rounded"
+                <a
+                  href="/კოდერი Setup 1.0.0.exe"
+                  download
+                  className="mt-4 px-5 py-2.5 text-sm font-bold text-white bg-vsc-blue border-none cursor-pointer rounded no-underline text-center"
                 >
                   ჩამოტვირთე
-                </button>
+                </a>
               </div>
             </motion.div>
           </>

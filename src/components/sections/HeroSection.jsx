@@ -65,10 +65,12 @@ export default function HeroSection() {
               variants={fadeUp}
               className="flex flex-wrap gap-3 justify-center lg:justify-start"
             >
-              <Button size="lg">
-                <Download size={18} />
-                ჩამოტვირთე უფასოდ
-              </Button>
+              <a href="/კოდერი Setup 1.0.0.exe" download>
+                <Button size="lg">
+                  <Download size={18} />
+                  ჩამოტვირთე უფასოდ
+                </Button>
+              </a>
               <Button
                 variant="secondary"
                 size="lg"

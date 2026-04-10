@@ -37,10 +37,12 @@ export default function FinalCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <Button size="lg" className="text-base px-10 py-4">
-            <Download size={18} />
-            ჩამოტვირთე კოდერი
-          </Button>
+          <a href="/კოდერი Setup 1.0.0.exe" download>
+            <Button size="lg" className="text-base px-10 py-4">
+              <Download size={18} />
+              ჩამოტვირთე კოდერი
+            </Button>
+          </a>
         </motion.div>
 
         <motion.p
