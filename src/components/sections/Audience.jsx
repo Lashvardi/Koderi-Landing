@@ -8,21 +8,21 @@ const audiences = [
     title: 'მშობლებისთვის',
     tag: 'PARENTS',
     description:
-      'თქვენი შვილი ისწავლის პროგრამირებას უსაფრთხო, მარტივ გარემოში. არანაირი ინტერნეტი, არანაირი რეკლამა — მხოლოდ სწავლა.',
+      'შექმენით თქვენი შვილისთვის უსაფრთხო ციფრული სივრცე. ყოველგვარი ყურადღების გამფანტველი რეკლამებისა და ინტერნეტის გარეშე — ფოკუსირებული მხოლოდ განვითარებაზე.',
     points: [
-      { icon: Shield, text: 'ოფლაინ მუშაობს — ინტერნეტი არ სჭირდება' },
-      { icon: Save, text: 'პროექტები ავტომატურად ინახება' },
-      { icon: Globe, text: 'სრულად ქართულ ენაზე' },
+      { icon: Shield, text: '100% ოფლაინ — არ მოითხოვს ინტერნეტთან კავშირს' },
+      { icon: Save, text: 'ნამუშევრების ავტომატური დაცვა და შენახვა' },
+      { icon: Globe, text: 'ინტერფეისი და გაკვეთილები მშობლიურ ენაზე' },
     ],
     accent: '#007ACC',
     terminal: {
       lines: [
-        { text: '// მშობლის სიმშვიდე', color: '#6A9955' },
+        { text: '// 100% უსაფრთხო გარემო', color: '#6A9955' },
         { text: 'const safety = {', color: '#cccccc' },
         { text: '  internet: false,', kv: true, key: 'internet', val: 'false', valColor: '#569cd6' },
         { text: '  ads: false,', kv: true, key: 'ads', val: 'false', valColor: '#569cd6' },
-        { text: '  tracking: false,', kv: true, key: 'tracking', val: 'false', valColor: '#569cd6' },
-        { text: '  learning: true ✓', kv: true, key: 'learning', val: 'true', valColor: '#4ec9b0', check: true },
+        { text: '  distractions: false,', kv: true, key: 'distractions', val: 'false', valColor: '#569cd6' },
+        { text: '  skillsGrowth: true ✓', kv: true, key: 'skillsGrowth', val: 'true', valColor: '#4ec9b0', check: true },
         { text: '}', color: '#cccccc' },
       ],
     },
@@ -32,26 +32,26 @@ const audiences = [
     title: 'მასწავლებლებისთვის',
     tag: 'TEACHERS',
     description:
-      'გამოიყენეთ კოდერი საკლასო ოთახში. ჩაშენებული სილაბუსი და მასალები მზადაა თქვენთვის.',
+      'მართეთ საგაკვეთილო პროცესი მარტივად. ინტეგრირებული ქართული სილაბუსი და მოსწავლეთა მონიტორინგის სისტემა ერთ პროგრამაში.',
     points: [
-      { icon: BookOpen, text: 'ჩაშენებული გაკვეთილები და სილაბუსი' },
-      { icon: FolderKanban, text: 'მოსწავლეების პროექტების მართვა' },
-      { icon: Clock, text: 'ინსტალაცია 2 წუთში — მზადაა' },
+      { icon: BookOpen, text: 'წინასწარ გამზადებული ინტერაქტიული გაკვეთილები' },
+      { icon: FolderKanban, text: 'მოსწავლეთა პროგრესისა და კოდის მონიტორინგი' },
+      { icon: Clock, text: 'სწრაფი ინსტალაცია სასკოლო კომპიუტერებზე' },
     ],
     accent: '#4ec9b0',
     terminal: {
       lines: [
-        { text: '// საკლასო ოთახის კონფიგურაცია', color: '#6A9955' },
+        { text: '// კლასის მართვის პანელი', color: '#6A9955' },
         { text: 'const classroom = {', color: '#cccccc' },
-        { text: '  students: 25,', kv: true, key: 'students', val: '25', valColor: '#b5cea8' },
-        { text: '  lessons: "built-in",', kv: true, key: 'lessons', val: '"built-in"', valColor: '#ce9178' },
-        { text: '  setup: "2 min",', kv: true, key: 'setup', val: '"2 min"', valColor: '#ce9178' },
-        { text: '  ready: true ✓', kv: true, key: 'ready', val: 'true', valColor: '#4ec9b0', check: true },
+        { text: '  students: 30,', kv: true, key: 'students', val: '30', valColor: '#b5cea8' },
+        { text: '  curriculum: "ჩაშენებული",', kv: true, key: 'curriculum', val: '"ჩაშენებული"', valColor: '#ce9178' },
+        { text: '  setupTime: "მყისიერი",', kv: true, key: 'setupTime', val: '"მყისიერი"', valColor: '#ce9178' },
+        { text: '  systemReady: true ✓', kv: true, key: 'systemReady', val: 'true', valColor: '#4ec9b0', check: true },
         { text: '}', color: '#cccccc' },
       ],
     },
   },
-]
+];
 
 const cardVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -62,12 +62,6 @@ export default function Audience() {
   return (
     <section className="py-24 px-4 sm:px-6 bg-surface-0 relative overflow-hidden">
       {/* Subtle background glow */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(0,122,204,0.03) 0%, transparent 70%)',
-        }}
-      />
 
       <div className="max-w-5xl mx-auto relative">
         <SectionHeading title="ვისთვისაა კოდერი?" />
@@ -85,7 +79,6 @@ export default function Audience() {
               style={{ borderColor: `${aud.accent}20`, backgroundColor: '#1e1e1e' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = `${aud.accent}40`
-                e.currentTarget.style.boxShadow = `0 4px 24px ${aud.accent}08, 0 0 48px ${aud.accent}04`
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = `${aud.accent}20`

@@ -61,13 +61,7 @@ const cardVariant = {
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 px-4 sm:px-6 bg-surface-0 relative overflow-hidden">
-      {/* Background glow */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(0,122,204,0.04) 0%, transparent 70%)',
-        }}
-      />
+ 
 
       <div className="max-w-5xl mx-auto relative">
         <SectionHeading
@@ -96,7 +90,6 @@ export default function HowItWorks() {
                       color: step.color,
                       borderColor: `${step.color}30`,
                       backgroundColor: `${step.color}08`,
-                      boxShadow: `0 0 20px ${step.color}10`,
                     }}
                   >
                     {step.number}
@@ -111,7 +104,6 @@ export default function HowItWorks() {
                     backgroundColor: '#1e1e1e',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = `0 4px 24px ${step.color}10, 0 0 48px ${step.color}06`
                     e.currentTarget.style.borderColor = `${step.color}40`
                   }}
                   onMouseLeave={(e) => {

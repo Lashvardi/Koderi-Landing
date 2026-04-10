@@ -9,14 +9,12 @@ export default function FinalCTA() {
       id="final-cta"
       className="relative py-28 px-4 sm:px-6 overflow-hidden bg-surface-0"
     >
-      <ParticlesBg id="particles-cta" />
+      <ParticlesBg />
 
       {/* Top glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(0,122,204,0.1) 0%, transparent 70%)',
-        }}
+
       />
 
       <div className="relative max-w-2xl mx-auto text-center">

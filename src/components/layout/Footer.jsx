@@ -11,20 +11,12 @@ export default function Footer() {
               <Terminal size={18} className="text-vsc-blue" />
               <span className="text-sm font-black text-vsc-text-bright tracking-tight">კოდერი</span>
             </a>
-            <p className="text-vsc-text-muted text-xs mt-1.5">&copy; 2025</p>
+            <p className="text-vsc-text-muted text-xs mt-1.5">&copy; {new Date().getFullYear()} </p>
           </div>
 
           {/* Links */}
           <div className="flex justify-center gap-6 text-xs">
-            {['კონტაქტი', 'კონფიდენციალურობა', 'IT Step Academy'].map((label) => (
-              <a
-                key={label}
-                href="#"
-                className="text-vsc-text-muted hover:text-vsc-text-bright no-underline transition-colors duration-200"
-              >
-                {label}
-              </a>
-            ))}
+
           </div>
 
           {/* Social */}
@@ -43,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-vsc-border/30 mt-6 pt-5 text-center text-xs text-vsc-text-muted">
-          შექმნილია <span className="text-vsc-red">&#10084;</span>-ით საქართველოში
+          შექმნილია საქართველოში
         </div>
       </div>
     </footer>

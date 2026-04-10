@@ -54,7 +54,7 @@ export default function AppPreview() {
         </div>
 
         {/* Preview window */}
-        <div className="rounded-lg overflow-hidden border border-vsc-border/50 glow-blue">
+        <div className="rounded-lg overflow-hidden border border-vsc-border/50 ">
           {/* Title bar */}
           <div className="flex items-center px-4 py-2 bg-surface-4 border-b border-vsc-border/40">
             <div className="flex gap-2 w-14">

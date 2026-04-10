@@ -3,33 +3,32 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { MessageSquare, Star } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
 
-/* {PLACEHOLDER} — Replace testimonials with real quotes */
-const testimonials = [
+ const testimonials = [
   {
-    quote: 'ჩემს შვილს ძალიან მოეწონა კოდერი. ახლა ყოველ დღე კოდს წერს და ვებ-გვერდებს აკეთებს!',
-    name: 'ნინო მ.',
-    role: 'მშობელი',
-    initials: 'ნმ',
-    accent: '#007ACC',
-    stars: 5,
-  },
-  {
-    quote: 'საკლასო ოთახში იდეალური ინსტრუმენტია. ბავშვები თავად სწავლობენ და ეხმარებიან ერთმანეთს.',
-    name: 'გიორგი კ.',
-    role: 'მასწავლებელი',
-    initials: 'გკ',
+    quote: 'კოდერი საუკეთესო პლატფორმაა დამწყებებისთვის. სწავლების პროცესი იმდენად მარტივი და ინტუიციურია, რომ სტუდენტები პირველივე დღიდან ერთვებიან კოდირებაში.',
+    name: 'ლიზა ხულელიძე',
+    role: 'ლექტორი',
+    initials: 'ლხ',
     accent: '#4ec9b0',
     stars: 5,
   },
   {
-    quote: 'პითონი ძალიან მარტივად ვისწავლე კოდერით. ახლა თამაშებს ვაკეთებ!',
-    name: 'ლუკა ტ.',
-    role: 'მოსწავლე',
-    initials: 'ლტ',
-    accent: '#dcdcaa',
+    quote: 'როგორც ლექტორმა, ბევრი ინსტრუმენტი ვცადე, მაგრამ კოდერის ქართული ინტერფეისი და ოფლაინ რეჟიმი მას შეუცვლელს ხდის სასწავლო აუდიტორიაში.',
+    name: 'ლუკა გუნცაძე',
+    role: 'ლექტორი',
+    initials: 'ლგ',
+    accent: '#007ACC',
     stars: 5,
   },
-]
+  {
+    quote: 'გაოცებული დავრჩი ამ IDE-ს სიმსუბუქითა და სისწრაფით. როგორც დეველოპერმა, შემიძლია ვთქვა, რომ ბავშვებისთვის კოდირების დასაწყებად იდეალური გარემოა.',
+    name: 'ნიკა ხინჩაგაშვილი',
+    role: 'დეველოპერი',
+    initials: 'ნხ',
+    accent: '#ce9178',
+    stars: 5,
+  },
+];
 
 export default function Testimonials() {
   return (
@@ -81,7 +80,8 @@ function TestimonialCard({ t, i }) {
       <div className="flex items-center justify-between px-5 py-3 border-b border-vsc-border/20" style={{ backgroundColor: '#252526' }}>
         <div className="flex items-center gap-2">
           <MessageSquare size={13} style={{ color: t.accent }} />
-          <span className="text-[10px] font-mono text-vsc-text-muted">{t.role}</span>
+          {/* შეცვლილია font-mono -> font-sans უკეთესი ქართული ვიზუალისთვის */}
+          <span className="text-[10px] font-sans font-medium text-vsc-text-muted">{t.role}</span>
         </div>
         <div className="flex gap-0.5">
           {Array.from({ length: t.stars }).map((_, si) => (
@@ -99,8 +99,13 @@ function TestimonialCard({ t, i }) {
         {/* Author */}
         <div className="flex items-center gap-3 pt-4 border-t border-vsc-border/15">
           <div
-            className="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold font-mono"
-            style={{ backgroundColor: `${t.accent}12`, color: t.accent }}
+            /* font-mono ამოღებულია ინიციალებიდან */
+            className="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold"
+            style={{ 
+              backgroundColor: `${t.accent}12`, 
+              color: t.accent,
+              fontFamily: '"Noto Sans Georgian", sans-serif' // გარანტირებული ქართული ფონტი
+            }}
           >
             {t.initials}
           </div>

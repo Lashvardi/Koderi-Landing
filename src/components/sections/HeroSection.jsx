@@ -23,7 +23,6 @@ const fadeIn = {
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-16 bg-surface-0">
-      {/* Particles background */}
       <ParticlesBg />
 
       {/* Subtle top-left glow */}
@@ -96,7 +95,6 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right: Editor mockup with typing animation */}
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -112,7 +110,7 @@ export default function HeroSection() {
                 }}
               />
               {/* Editor window */}
-              <div className="relative rounded-lg overflow-hidden border border-vsc-border/60 glow-blue">
+              <div className="relative rounded-lg overflow-hidden border border-vsc-border/60 ">
                 {/* Title bar */}
                 <div className="flex items-center px-4 py-2 bg-surface-4 border-b border-vsc-border/40">
                   <div className="flex gap-2">
